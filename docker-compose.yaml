@@ -105,6 +105,8 @@ services:
     environment:
       ZBX_HOSTNAME: "lab-host"
       ZBX_SERVER_HOST: zabbix-server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
     networks:
       - zabbix-net
     depends_on:
